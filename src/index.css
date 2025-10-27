@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "Gambarino";
+  src: url(../fonts/Gambarino-Regular.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: auto;
+  font-family: "Gambarino";
+  background-color: #ECEAD3;
+}
+video {
+  object-fit: cover; /*c overs the whole page for image and videos*/
+  filter: blur(5px);
+}
+img{
+  user-select: none;
+}
+.slideshow-video {
+  width: 100%;
+  height: 100vh;
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.placards{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  pointer-events: none;
+}
+.board {
+  position: relative;
+  top: 45%;
+  left: 42%;
+  height: 100vh;
+  width: 100%;
+  transform: translate(-19%, -22%);
+  perspective: 1000px;
+  pointer-events: none;
+  margin: 0 auto;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.295));
+}
+.flip-board-inner{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+}
+.flip-board-front,
+.flip-board-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform-origin: center center;
+}
+.flip-board-front img,
+.flip-board-back img{
+  height: fit-content;
+  width: 900px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.flip-board-back {
+  transform: rotateY(180deg);
+}
+.content{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.message-container{
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  z-index: 10;
+  color: #ECEAD3;
+}
+.dear-header{
+  width: 60%;
+  font-size: 2rem;
+}
+.dear-body{
+  width: 60%;
+  font-size: 1.2rem;
+}
+.image-holder{
+  width: 100%;
+  height: 100%;
+}
+.content img{
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
